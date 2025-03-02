@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.context.GlobalContext
 import org.koin.core.context.startKoin
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
@@ -56,7 +57,7 @@ class ProductRepositoryImpl : ProductRepository {
 }
 
 class UserRepositoryImpl(private val productRepository: ProductRepository) : UserRepository {
-    override fun getCurrentUser(): User? = User("1", "John Doe")
+    override fun getCurrentUser(): User = User("1", "John Doe")
 }
 
 // ============== KOIN MODULES ==============
@@ -193,7 +194,7 @@ class DetailCoordinator(
 ) {
     // Get ViewModel with the productId parameter
     private val viewModel: DetailViewModel by lazy {
-        org.koin.core.context.GlobalContext.get().get { parametersOf(productId) }
+        GlobalContext.get().get { parametersOf(productId) }
     }
 
     val stateFlow = viewModel.state
