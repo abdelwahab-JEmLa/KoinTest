@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import org.koin.core.parameter.parametersOf
 
 // ============== VIEWMODELS ==============
 
@@ -96,9 +97,13 @@ class MainCoordinator(
 
 class DetailCoordinator(
     private val productId: String,
-    private val viewModel: DetailViewModel,
     private val navigator: Navigator
 ) {
+    // Get ViewModel with the productId parameter
+    private val viewModel: DetailViewModel by lazy {
+        org.koin.core.context.GlobalContext.get().get { parametersOf(productId) }
+    }
+
     val stateFlow = viewModel.state
 
     fun onBackClick() {

@@ -68,10 +68,9 @@ val viewModelModule = module {
     viewModel { parameters -> DetailViewModel(productId = parameters.get(), repository = get()) }
 }
 
-// Module pour les coordinateurs
 val coordinatorModule = module {
     factory { (navigator: Navigator) -> MainCoordinator(get(), navigator) }
-    factory { (productId: String, navigator: Navigator) -> DetailCoordinator(productId, get(), navigator) }
+    factory { (productId: String, navigator: Navigator) -> DetailCoordinator(productId, navigator) }
 }
 
 // Module principal qui regroupe tous les autres modules
