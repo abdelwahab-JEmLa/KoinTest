@@ -110,9 +110,6 @@ class UserRepositoryImpl(private val productRepository: ProductRepository) : Use
     override fun getCurrentUser(): User = User("1", "John Doe")
 }
 
-
-
-
 // ============== COORDINATORS ==============
 
 class MainCoordinator(

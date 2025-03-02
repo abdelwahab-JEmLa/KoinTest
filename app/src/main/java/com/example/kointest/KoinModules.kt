@@ -1,4 +1,4 @@
-package App.Modules
+package com.example.kointest
 
 import App.Model.Navigator
 import App.ViewModel.DetailCoordinator

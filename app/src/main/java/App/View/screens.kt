@@ -141,7 +141,7 @@ fun DetailScreen(
                 }
 
                 else -> {
-                    ProductDetail(product = state.product!!)
+                    ProductDetail(product = state.product)
                 }
             }
         }
