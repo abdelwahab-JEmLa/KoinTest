@@ -24,7 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-
+              //
 // Écran principal
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -58,7 +58,7 @@ fun MainScreen(
 
                 state.error != null -> {
                     ErrorContent(
-                        message = state.error ?: "Une erreur s'est produite",
+                        message = state.error,
                         onRetry = onRetry,
                         modifier = Modifier.align(Alignment.Center)
                     )
