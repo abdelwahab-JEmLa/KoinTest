@@ -14,7 +14,7 @@ import org.koin.core.context.GlobalContext
 import org.koin.core.parameter.parametersOf
 
 // ============== UI STATES ==============
-
+             //
 data class MainState(
     val products: List<Product> = emptyList(),
     val isLoading: Boolean = false,
@@ -26,6 +26,7 @@ data class DetailState(
     val isLoading: Boolean = false,
     val error: String? = null
 )
+
 // ============== VIEWMODELS ==============
 
 class MainViewModel(private val repository: ProductRepository) : ViewModel() {
@@ -80,6 +81,7 @@ class DetailViewModel(
         loadProductDetails()
     }
 }
+
 // ============== REPOSITORIES ==============
 
 // Repository interfaces
