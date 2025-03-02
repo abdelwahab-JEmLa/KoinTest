@@ -1,5 +1,6 @@
 package com.example.kointest
 
+import App.Modules.appModule
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger

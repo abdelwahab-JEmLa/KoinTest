@@ -1,5 +1,6 @@
-package com.example.kointest
+package App.View
 
+import App.Model.Product
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

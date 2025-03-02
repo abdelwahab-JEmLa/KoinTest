@@ -1,4 +1,4 @@
-package com.example.kointest
+package App.Model
 
 data class Product(
     val id: String,

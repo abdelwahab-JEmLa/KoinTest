@@ -1,5 +1,8 @@
-package com.example.kointest
+package App.ViewModel
 
+import App.Model.Navigator
+import App.Model.Product
+import App.Model.User
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow

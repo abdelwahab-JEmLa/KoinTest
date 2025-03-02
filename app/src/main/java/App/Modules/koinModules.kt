@@ -1,5 +1,14 @@
-package com.example.kointest
+package App.Modules
 
+import App.Model.Navigator
+import App.ViewModel.DetailCoordinator
+import App.ViewModel.DetailViewModel
+import App.ViewModel.MainCoordinator
+import App.ViewModel.MainViewModel
+import App.ViewModel.ProductRepository
+import App.ViewModel.ProductRepositoryImpl
+import App.ViewModel.UserRepository
+import App.ViewModel.UserRepositoryImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

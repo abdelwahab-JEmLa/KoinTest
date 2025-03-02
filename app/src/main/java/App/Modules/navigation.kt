@@ -1,5 +1,10 @@
-package com.example.kointest
+package App.Modules
 
+import App.Model.Navigator
+import App.View.DetailScreen
+import App.View.MainScreen
+import App.ViewModel.DetailCoordinator
+import App.ViewModel.MainCoordinator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
